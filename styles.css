@@ -1,12 +1,12 @@
 /* ============================================================
-   GREAT SALT LAKE SITE — STYLES
+   GREAT SALT LAKE SITE, STYLES
    Color palette inspired by the lake itself:
-   - Salt white / bone (#f4efe6) — background
-   - Deep brine blue (#0c2a3a) — headlines, dark sections
-   - Alkali teal (#2a7080) — accents
-   - Rust / alarm (#c45a3a) — danger, callouts
-   - Alfalfa green (#5a7a3a) — agricultural data
-   - Dust ochre (#c79a4a) — toxic dust section
+   - Salt white / bone (#f4efe6), background
+   - Deep brine blue (#0c2a3a), headlines, dark sections
+   - Alkali teal (#2a7080), accents
+   - Rust / alarm (#c45a3a), danger, callouts
+   - Alfalfa green (#5a7a3a), agricultural data
+   - Dust ochre (#c79a4a), toxic dust section
    ============================================================ */
 
 :root {
@@ -213,47 +213,49 @@ p { margin: 0 0 1em; }
 }
 .hero__source a { color: var(--mute); }
 
-/* Hero lake visualization */
-.hero__lake {
+/* Lake elevation chart (replaces simple lake bar) */
+.lake-chart {
   max-width: var(--max);
   margin: 3rem auto 0;
-  position: relative;
-  height: 80px;
-  background: linear-gradient(to top, var(--teal-light), var(--teal));
-  border-radius: 6px;
-  overflow: hidden;
-  border: 1px solid rgba(12,42,58,0.15);
-  box-shadow: inset 0 -4px 12px rgba(0,0,0,0.15);
+  background: var(--bone);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 1.5rem 1.25rem 1.25rem;
+  box-shadow: var(--shadow);
 }
-.hero__lake-fill {
-  position: absolute;
-  bottom: 0; left: 0;
-  width: 100%;
-  /* current is ~4,192.6 ft, healthy floor is 4,198 ft, lowest visualized is ~4,188 ft.
-     Show how much of the "healthy zone" is currently full. Roughly 46% of the way from 4,188 to 4,198. */
-  height: 46%;
-  background:
-    repeating-linear-gradient(
-      45deg,
-      rgba(244, 239, 230, 0.12) 0,
-      rgba(244, 239, 230, 0.12) 8px,
-      rgba(244, 239, 230, 0) 8px,
-      rgba(244, 239, 230, 0) 16px
-    ),
-    linear-gradient(to top, var(--ochre) 0%, var(--rust) 100%);
-  border-top: 1px dashed var(--bone);
-}
-.hero__lake-label {
-  position: absolute;
-  inset: 0;
+.lake-chart__caption {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--bone);
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
-  letter-spacing: 0.02em;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 0.75rem;
+}
+.lake-chart__title {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+.lake-chart__sub {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  line-height: 1.45;
+}
+.lake-chart__svg-wrap { width: 100%; }
+.lake-chart__svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.lake-chart__source {
+  font-size: 0.78rem;
+  color: var(--mute);
+  margin-top: 0.5rem;
+  text-align: right;
+}
+.lake-chart__source a { color: var(--mute); }
+@media (max-width: 600px) {
+  .lake-chart { padding: 1.25rem 0.85rem 0.85rem; }
+  .lake-chart__title { font-size: 1rem; }
 }
 
 /* ------------------------------------------------------------
@@ -346,9 +348,15 @@ p { margin: 0 0 1em; }
    ------------------------------------------------------------ */
 .stat-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin: 2rem 0 2.5rem;
+}
+@media (max-width: 900px) {
+  .stat-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .stat-grid { grid-template-columns: 1fr; }
 }
 .stat {
   padding: 1.5rem;
@@ -510,6 +518,107 @@ p { margin: 0 0 1em; }
 }
 
 /* ------------------------------------------------------------
+   SECTION BANNERS (full-width imagery at top of a section)
+   ------------------------------------------------------------ */
+.section--has-banner { padding-top: 0; }
+.section-banner {
+  margin: 0 0 var(--section-y);
+  position: relative;
+  overflow: hidden;
+  max-height: 360px;
+}
+.section-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 360px;
+}
+.section-banner__credit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: rgba(12, 42, 58, 0.65);
+  color: var(--bone);
+  padding: 0.4rem 0.85rem;
+  font-size: 0.72rem;
+  border-top-left-radius: 4px;
+}
+.section-banner--dramatic { max-height: 420px; }
+.section-banner--dramatic img { max-height: 420px; }
+@media (max-width: 600px) {
+  .section-banner, .section-banner img { max-height: 220px; }
+}
+
+/* ------------------------------------------------------------
+   SATELLITE BEFORE / AFTER (inside Crisis section)
+   ------------------------------------------------------------ */
+.satellite {
+  margin: 2.5rem 0 0;
+  padding: 0;
+}
+.satellite__caption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+.satellite__title {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--bone);
+}
+.satellite__sub {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: rgba(250, 246, 239, 0.78);
+  max-width: 70ch;
+}
+.satellite__pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+.satellite__img {
+  margin: 0;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(250, 246, 239, 0.15);
+  background: #000;
+}
+.satellite__img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.satellite__img figcaption {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  background: rgba(12, 42, 58, 0.85);
+  color: var(--bone);
+  padding: 0.25rem 0.6rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border-radius: 3px;
+}
+.satellite__credit {
+  font-size: 0.78rem;
+  color: rgba(250, 246, 239, 0.5);
+  text-align: right;
+  margin: 0;
+}
+@media (max-width: 640px) {
+  .satellite__pair { grid-template-columns: 1fr; }
+}
+
+/* ------------------------------------------------------------
    EXPORT CALLOUT (Where the Water Goes section)
    ------------------------------------------------------------ */
 .export-card {
@@ -614,11 +723,37 @@ p { margin: 0 0 1em; }
 
 .rogue__header {
   display: flex;
-  align-items: flex-start;
-  gap: 1rem;
+  align-items: center;
+  gap: 1.25rem;
   margin-bottom: 1.5rem;
   padding-bottom: 1.25rem;
   border-bottom: 1px solid var(--rule);
+}
+.rogue__photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  flex-shrink: 0;
+  border: 3px solid var(--bone);
+  box-shadow: 0 2px 8px rgba(12, 42, 58, 0.18);
+  background: var(--ink-soft);
+}
+.rogue__photo--mono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--bone);
+  letter-spacing: 0.02em;
+  background: linear-gradient(135deg, var(--rust) 0%, var(--rust-deep) 100%);
+}
+.rogue__photo--industry {
+  background: linear-gradient(135deg, var(--teal) 0%, var(--brine) 100%);
+  font-size: 2rem;
 }
 .rogue__badge {
   display: inline-block;
@@ -631,7 +766,7 @@ p { margin: 0 0 1em; }
   letter-spacing: 0.1em;
   text-transform: uppercase;
   white-space: nowrap;
-  flex-shrink: 0;
+  margin-bottom: 0.5rem;
 }
 .rogue__title-block { flex: 1; min-width: 0; }
 .rogue__name {
