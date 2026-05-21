@@ -212,16 +212,7 @@ p { margin: 0 0 1em; }
   width: 100%;
   height: auto;
   display: block;
-  filter: drop-shadow(0 4px 12px rgba(12, 42, 58, 0.10));
-}
-.hero__art-caption {
-  font-family: var(--sans);
-  font-size: 0.78rem;
-  color: var(--mute);
-  letter-spacing: 0.02em;
-  margin: 0;
-  text-align: center;
-  font-weight: 500;
+  filter: drop-shadow(0 6px 18px rgba(12, 42, 58, 0.18));
 }
 .hero__kicker {
   display: inline-block;
