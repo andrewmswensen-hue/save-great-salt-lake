@@ -36,6 +36,7 @@
       <li><a href="#water">Where the Water Goes</a></li>
       <li><a href="#dust">Toxic Dust</a></li>
       <li><a href="#hypocrisy">The Hypocrisy</a></li>
+      <li><a href="#proposal">The Fix</a></li>
       <li><a href="#act" class="nav__cta">Take Action</a></li>
     </ul>
   </nav>
@@ -48,8 +49,9 @@
       <p class="hero__kicker">Utah's water crisis, fact-checked</p>
       <h1 class="hero__title">
         Great Salt Lake is dying.<br />
-        <span class="hero__title-accent">It's not your shower.</span>
+        <span class="hero__title-accent">Your tap is not the problem.</span>
       </h1>
+      <a href="#vs" class="hero__jump">Then where is all the water going? <span aria-hidden="true">↓</span></a>
       <p class="hero__sub">
         Today Utah declared a statewide drought emergency. Residents are again being asked to fix sprinklers,
         skip lawn watering, and "control the tap." Here's what isn't on the press release:
@@ -71,7 +73,7 @@
     <figure class="lake-chart">
       <figcaption class="lake-chart__caption">
         <span class="lake-chart__title">Great Salt Lake elevation, 1900 to 2026</span>
-        <span class="lake-chart__sub">Annual average at the USGS Saltair gauge. The dashed line marks the minimum healthy level (4,198 ft). The lake has spent most of the last 20 years below it.</span>
+        <span class="lake-chart__sub">Annual average at the USGS Saltair gauge. <strong>These numbers are the height of the water's surface above sea level, not the depth of the lake.</strong> Utah sits on a high-elevation basin, so "healthy" is 4,198 ft and "record low" is 4,188 ft, a swing of only ten feet that represents catastrophic volume loss. The dashed line marks the minimum healthy level. The lake has spent most of the last 20 years below it.</span>
       </figcaption>
       <div id="lakeChart" class="lake-chart__svg-wrap" role="img" aria-label="Line chart showing Great Salt Lake annual average elevation from 1900 to 2026, with the 1986 high and 2022 record low highlighted."></div>
       <div class="lake-chart__source">
@@ -79,6 +81,40 @@
       </div>
     </figure>
   </header>
+
+  <!-- ============================================== -->
+  <!-- SECTION: WHY THIS SITE EXISTS (MANIFESTO) -->
+  <!-- ============================================== -->
+  <section class="section section--manifesto" id="why">
+    <div class="section__inner">
+      <p class="eyebrow">Why this site exists</p>
+      <h2 class="manifesto__head">
+        There are good resources out there about the Great Salt Lake crisis.
+        <span class="manifesto__head-accent">None of them are willing to be as blunt as the situation demands.</span>
+      </h2>
+      <div class="manifesto__body">
+        <p>
+          KSL, the Salt Lake Tribune, Audubon, Friends of Great Salt Lake, Grow the Flow, the Great Salt
+          Lake Collaborative. They all do important work, and we cite them throughout this site. But the
+          measured, both-sides framing they're built to use can't carry the weight of what's actually
+          happening here.
+        </p>
+        <p>
+          The lake is dying. The state is run by people who personally profit from the industry killing
+          it. And every press conference points the camera at your sprinklers. <strong>That is the
+          story.</strong> It doesn't need more polite hedging. It needs to be said plainly, by name,
+          with the numbers, so loudly that the politicians responsible can't pretend they didn't hear it.
+        </p>
+        <p>
+          So here we are.
+        </p>
+      </div>
+      <p class="manifesto__tagline">
+        Let's make the Salt Lake great again,<br />
+        <span class="manifesto__tagline-accent">before it's too late.</span>
+      </p>
+    </div>
+  </section>
 
   <!-- ============================================== -->
   <!-- SECTION: THE CRISIS -->
@@ -132,19 +168,19 @@
       <figure class="satellite">
         <figcaption class="satellite__caption">
           <span class="satellite__title">You can see it from space.</span>
-          <span class="satellite__sub">NASA Landsat imagery of the Great Salt Lake in July 2017 (left) vs. July 2021 (right). The southern arm has visibly receded; the northern arm appears pink as salinity climbs past the threshold where saline-tolerant algae take over.</span>
+          <span class="satellite__sub">NASA Landsat imagery of the Great Salt Lake in June 1985 (left) at its modern peak elevation of 4,210 ft, vs. July 2022 (right) at the record low of 4,190 ft, a roughly 22-foot drop in less than four decades. Same satellite program, same framing. The northern arm in 2022 appears pink because rising salinity has crossed the threshold where saline-tolerant algae take over.</span>
         </figcaption>
         <div class="satellite__pair">
           <figure class="satellite__img">
-            <img src="images/gsl-2017.jpg" alt="NASA Landsat satellite image of the Great Salt Lake in July 2017, showing fuller water levels" loading="lazy" />
-            <figcaption>July 2017</figcaption>
+            <img src="images/gsl-1985.jpg" alt="NASA Landsat satellite image of the Great Salt Lake in June 1985, showing the lake near its historic high water level with a deep blue, fully connected northern and southern basin" loading="lazy" />
+            <figcaption>June 1985 · 4,210 ft</figcaption>
           </figure>
           <figure class="satellite__img">
-            <img src="images/gsl-2021.jpg" alt="NASA Landsat satellite image of the Great Salt Lake in July 2021, with visibly retreated shoreline and pink north arm" loading="lazy" />
-            <figcaption>July 2021</figcaption>
+            <img src="images/gsl-2022.jpg" alt="NASA Landsat satellite image of the Great Salt Lake in July 2022 at its record low, showing extensive exposed white lakebed, a fragmented southern arm, and a hyper-saline pink northern arm" loading="lazy" />
+            <figcaption>July 2022 · 4,190 ft</figcaption>
           </figure>
         </div>
-        <p class="satellite__credit">NASA Earth Observatory images by Joshua Stevens, using Landsat data from the U.S. Geological Survey.</p>
+        <p class="satellite__credit">NASA Earth Observatory images by Michelle Bouchard, using Landsat data from the U.S. Geological Survey.</p>
       </figure>
     </div>
   </section>
@@ -154,8 +190,8 @@
   <!-- ============================================== -->
   <section class="section section--has-banner" id="water">
     <figure class="section-banner">
-      <img src="images/alfalfa.jpg" alt="Irrigated alfalfa fields in the American West" loading="lazy" />
-      <figcaption class="section-banner__credit">Irrigated alfalfa, Florence, Arizona. Photo: Chris English / Wikimedia Commons, CC BY-SA 3.0.</figcaption>
+      <img src="images/alfalfa-idaho.jpg" alt="A green alfalfa hayland in Idaho, planted as livestock feed in the Great Salt Lake watershed" loading="lazy" />
+      <figcaption class="section-banner__credit">Alfalfa hayland in Idaho, in the Bear River basin (the Great Salt Lake's largest tributary). Photo: USDA NRCS / Charma Comer, public domain.</figcaption>
     </figure>
     <div class="section__inner">
       <p class="eyebrow">The math is brutal</p>
@@ -211,7 +247,7 @@
         </div>
       </div>
 
-      <div class="contrast-card">
+      <div class="contrast-card" id="vs">
         <div class="contrast-card__row">
           <div class="contrast-card__col">
             <div class="contrast-card__icon">🚿</div>
@@ -262,6 +298,34 @@
         export figures derived from <a href="https://www.census.gov/foreign-trade/statistics/state/data/ut.html" target="_blank" rel="noopener">U.S. Census Bureau State Trade Data</a> ·
         amusement-park comparison: <a href="https://www.sltrib.com/news/environment/2022/11/24/one-crop-uses-more-than-half/" target="_blank" rel="noopener">Salt Lake Tribune (Nov 2022)</a>.
       </p>
+
+      <!-- CONSERVATION STILL MATTERS -->
+      <div class="reassure">
+        <h3 class="reassure__title">To be clear, conservation still matters.</h3>
+        <p>
+          Utah is a desert. Every gallon counts, and every household that fixes a leak, rips out a lawn, or
+          installs a low-flow showerhead is doing the right thing. Conservation is always worth doing,
+          and we should keep doing it.
+        </p>
+        <p>
+          The point of this site is not to tell you to stop conserving. It's to point out that
+          <strong>residents have been carrying the public-shame load for a problem they did not create
+          and cannot solve alone.</strong> You can take a five-minute shower every day for the rest of
+          your life and the Great Salt Lake will still die, because the math of agricultural diversion
+          dwarfs anything residents can do at the tap. The solution has to come from the same
+          policymakers who keep aiming the camera at you.
+        </p>
+      </div>
+
+      <!-- BIG SOLUTION CALLOUT -->
+      <div class="big-solution">
+        <p class="big-solution__lead">The solution is simple.</p>
+        <p class="big-solution__main">Stop growing alfalfa in Utah.</p>
+        <p class="big-solution__sub">
+          Not because farmers are villains. Because the desert can't afford it, and the lake can't
+          survive it, and the math doesn't work any other way.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -277,9 +341,10 @@
       <p class="eyebrow">The next wave</p>
       <h2 class="section__title">Every foot the lake drops releases more poison into the air.</h2>
       <p class="section__lead">
-        Beneath the lake sits more than a century of mining tailings, smelter fallout, and pesticide runoff.
-        As the lakebed dries, that toxic sediment becomes airborne dust, and it blows directly into one of
-        the fastest-growing metro areas in the country.
+        Beneath the lake sits more than a century of mining tailings, smelter fallout, and pesticide
+        runoff. Every foot the lake drops uncovers more of it. The dust blows straight into Salt Lake
+        City, Ogden, and Provo. <strong>There is no version of letting the lake die that doesn't end in
+        a public-health disaster for the 2.5 million people who live downwind of it.</strong>
       </p>
 
       <div class="dust-grid">
@@ -337,10 +402,10 @@
       <p class="eyebrow">Name the names</p>
       <h2 class="section__title">The people asking you to take shorter showers are the people growing alfalfa.</h2>
       <p class="section__lead">
-        Utah politicians have spent five years framing the Great Salt Lake crisis as a personal-responsibility
-        problem for residents. Meanwhile, several of the most powerful figures in Utah water policy
-        <strong>personally farm (or come from families that farm) the exact crop scientists say is the
-        single biggest driver of the lake's collapse.</strong>
+        Utah's political class has spent five years gaslighting residents. The most powerful figures in
+        state water policy <strong>are themselves alfalfa farmers</strong>, and they have worked overtime
+        to keep your eyes on your sprinklers instead of their fields. These are the names. This is the
+        record.
       </p>
 
       <!-- COX CARD -->
@@ -382,10 +447,12 @@
             Cox's administration declined to commit to the recommendations.
           </p>
           <p class="rogue__fairness">
-            <strong>Honest caveat:</strong> Cox's farm is in the Sevier River basin, not the Great Salt Lake
-            watershed, his alfalfa doesn't literally drain the lake. But he is the most powerful elected
-            defender of Utah's alfalfa industry, has called critics "ignorant," and has resisted the single
-            policy lever (acreage reduction) that the peer-reviewed science says would save the lake.
+            <strong>To pre-empt the inevitable rebuttal:</strong> Cox's farm is in the Sevier River
+            basin, not the Great Salt Lake watershed, so his specific water doesn't literally drain the
+            lake. Fine. He is still the most powerful elected defender of Utah's alfalfa industry, he
+            has called critics "ignorant" on camera, and he has flatly resisted the one policy lever
+            (acreage reduction) that the peer-reviewed science says would save the lake. The
+            watershed-boundary technicality changes nothing about that.
           </p>
         </div>
         <div class="rogue__sources">
@@ -509,9 +576,9 @@
             scarier than in one growing season I'm going to lease a portion of my right."</em>
           </p>
           <p class="rogue__fairness">
-            Snider, to his credit, has been more publicly engaged on Great Salt Lake than most rural
-            Republicans. The hypocrisy isn't that he's bad; it's that the same handful of farmers writing
-            Utah's water laws also stand to benefit personally from the programs those laws create.
+            Snider has been more publicly engaged on Great Salt Lake than most rural Republicans. That
+            doesn't change the structural conflict: the same handful of farmers writing Utah's water
+            laws will also be cashing the checks those laws create.
           </p>
         </div>
         <div class="rogue__sources">
@@ -522,11 +589,17 @@
         </div>
       </article>
 
-      <p class="bottom-line">
-        <strong>The bottom line:</strong> when Utah's most powerful water-policy figures are themselves
-        alfalfa farmers, "personal responsibility" messaging aimed at residents isn't a public-health
-        campaign, it's a deflection. Demand more from the people you elected.
-      </p>
+      <div class="bottom-line">
+        <p class="bottom-line__kicker">The bottom line</p>
+        <p class="bottom-line__main">
+          When the people writing Utah's water laws are themselves alfalfa farmers,
+          <span class="bottom-line__accent">"personal responsibility" is not a policy. It's a deflection.</span>
+        </p>
+        <p class="bottom-line__sub">
+          Stop accepting "fix your sprinklers" from people who refuse to fix their own industry. Demand
+          more from the people you elected. Their names are above. So is their record.
+        </p>
+      </div>
 
       <!-- DATA CENTER CARD -->
       <article class="rogue rogue--industry">
@@ -577,7 +650,7 @@
   <section class="section" id="fix">
     <div class="section__inner">
       <p class="eyebrow">What scientists actually recommend</p>
-      <h2 class="section__title">The lake can still be saved. The fix is unpopular, but it's not expensive.</h2>
+      <h2 class="section__title">We know exactly how to save the lake. Utah's leaders refuse to do it.</h2>
 
       <div class="fix-grid">
         <div class="fix-card">
@@ -642,6 +715,95 @@
   </section>
 
   <!-- ============================================== -->
+  <!-- SECTION: AMATEUR'S PROPOSAL -->
+  <!-- ============================================== -->
+  <section class="section section--proposal" id="proposal">
+    <div class="section__inner">
+      <p class="eyebrow">A thought experiment</p>
+      <h2 class="section__title">An amateur's proposal: buy them out and move them out.</h2>
+      <p class="section__lead">
+        We are not policy experts. We are residents looking at numbers. Here's a back-of-envelope idea
+        that an actual policy team could refine. The point is to show that the "we can't possibly afford
+        to fix this" framing is wrong. We can. Easily.
+      </p>
+
+      <div class="proposal-grid">
+        <div class="proposal-stat">
+          <div class="proposal-stat__num">$360M</div>
+          <div class="proposal-stat__label">Total value of Utah's alfalfa production in 2025 (USDA NASS). The entire state-wide industry is smaller than a single mid-sized tech company's annual revenue.</div>
+        </div>
+        <div class="proposal-stat">
+          <div class="proposal-stat__num">~300,000</div>
+          <div class="proposal-stat__label">Acres of alfalfa we'd need to retire to stabilize the lake, per peer-reviewed modeling. About 61% of Utah's current alfalfa acreage.</div>
+        </div>
+        <div class="proposal-stat">
+          <div class="proposal-stat__num">$2-3B</div>
+          <div class="proposal-stat__label">Estimated one-time cost to buy out that acreage at current Utah irrigated-cropland prices (~$8,200 per acre). For comparison, Australia spent A$7.2B on water recovery in the Murray-Darling basin.</div>
+        </div>
+        <div class="proposal-stat">
+          <div class="proposal-stat__num">~1%</div>
+          <div class="proposal-stat__label">Of the LDS Church's estimated $265 billion in total assets (Salt Lake Tribune / Widow's Mite Report, 2023). One percent. Once. Forever.</div>
+        </div>
+      </div>
+
+      <div class="proposal-narrative">
+        <h3>Here's the idea in plain English.</h3>
+        <p>
+          Utah's water crisis is not, fundamentally, about money. It is about political will to confront
+          a specific industry. The industry itself, in dollar terms, is small. <strong>Utah alfalfa
+          generates about $360 million per year in revenue, roughly 0.04% of the state's GDP.</strong>
+        </p>
+        <p>
+          So here's the proposal. The State of Utah, the federal government, the LDS Church, or some
+          combination of philanthropic and public funders could finance a <strong>one-time, voluntary
+          buyout program</strong> that pays Utah's alfalfa farmers fair market value for their land and
+          water rights, plus a relocation grant to set up alfalfa operations in a part of the country
+          where alfalfa actually belongs.
+        </p>
+        <p>
+          <strong>Where would they go?</strong> Wisconsin grows more alfalfa than any state in America,
+          and most of it is rainfed (no irrigation needed). Minnesota, Iowa, South Dakota, Pennsylvania,
+          New York, and Michigan all produce alfalfa primarily on rainfall. Cropland in Oregon ($4,350
+          per acre), Washington ($3,410), and New York ($3,850) is cheaper than Utah's irrigated
+          cropland ($8,200). A Utah alfalfa farmer could sell their land for $8,200 an acre, buy more
+          acreage in a water-rich state, and continue farming, profitably, without draining a dying
+          desert lake.
+        </p>
+        <p>
+          <strong>Who pays?</strong> Distribute the $2 to $3 billion over a decade and it costs roughly
+          $30 to $120 per Utah resident per year, the same range Richter et al. estimate for compensating
+          farmers in place. Or fund it directly: the LDS Church's investment arm alone holds an
+          estimated $57 billion in U.S. stocks publicly disclosed to the SEC. A 4% redirection of that
+          single portfolio would cover the entire buyout. The Church will not do this, of course. But
+          the point stands. <strong>"It's too expensive" is not a real argument.</strong> It is a cover
+          for "we don't want to."
+        </p>
+        <p>
+          <strong>What about the farmers?</strong> Nobody on this site wants to put Utah farmers out of
+          business. Most Utah alfalfa farmers are doing exactly what their grandfathers did, with water
+          rights their families have held for a century, under laws that have always rewarded full
+          diversion. They are not the villains. The villains are the politicians who refuse to lead the
+          industry through a transition that the math has been screaming about for twenty years. A
+          buyout-and-relocation program is the most farmer-friendly version of the response. It treats
+          them as partners, not problems.
+        </p>
+        <p class="proposal-narrative__close">
+          <strong>The lake is dying. The fix is cheap. The barrier is political, not financial.</strong>
+        </p>
+      </div>
+
+      <p class="section__source">
+        Sources:
+        <a href="https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=UTAH" target="_blank" rel="noopener">USDA NASS Utah State Agriculture Overview (2025)</a> ·
+        <a href="https://www.sciencedirect.com/science/article/pii/S2667010024002312" target="_blank" rel="noopener">Richter et al., Environmental Challenges (2024)</a> ·
+        <a href="https://www.nass.usda.gov/Publications/Todays_Reports/reports/land0824.pdf" target="_blank" rel="noopener">USDA NASS Land Values 2024 Summary</a> ·
+        <a href="https://www.sltrib.com/religion/2024/02/17/lds-church-investment-fund-takes/" target="_blank" rel="noopener">Salt Lake Tribune on Ensign Peak and Church assets</a> ·
+        <a href="https://theconversation.com/water-buybacks-are-back-on-the-table-in-the-murray-darling-basin-heres-a-refresher-on-how-they-work-200529" target="_blank" rel="noopener">The Conversation on Murray-Darling water buybacks</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================== -->
   <!-- SECTION: TAKE ACTION -->
   <!-- ============================================== -->
   <section class="section section--act" id="act">
@@ -649,9 +811,10 @@
       <p class="eyebrow">Don't doomscroll. Send the email.</p>
       <h2 class="section__title">Write your state legislator. Right now. It takes 3 minutes.</h2>
       <p class="section__lead">
-        Utah lawmakers respond to constituent contact, and almost nobody bothers. A few hundred personal
-        emails on a single bill can change a vote. Use the template below, or write your own. Be polite,
-        be specific, and tell them you're watching.
+        Utah lawmakers count constituent emails, and almost nobody sends one. A few hundred personal
+        emails on a single bill can change a vote. That is not exaggeration, it is how this system
+        actually works. Use the template below, or write your own. Be specific, be relentless, and tell
+        them you are watching their record.
       </p>
 
       <div class="action-grid">
@@ -722,8 +885,8 @@ Respectfully,
     <div class="section__inner">
       <h2 class="footer__title">Every claim on this page is sourced.</h2>
       <p class="footer__intro">
-        This site is intentionally fact-first. If you find an error, email
-        <a href="mailto:andrew.m.swensen@gmail.com">andrew.m.swensen@gmail.com</a> and we'll correct it.
+        This site is intentionally fact-first. Don't take our word for anything. Click through to the
+        peer-reviewed studies, primary documents, and reporting cited below, and decide for yourself.
       </p>
 
       <div class="sources">
@@ -775,8 +938,8 @@ Respectfully,
       </div>
 
       <p class="footer__small">
-        Built independently. No funding from any political party, advocacy group, or industry. Built because
-        the lake matters.
+        An independent, fact-first project. No funding from any political party, advocacy group, or industry.
+        Built because the lake matters.
       </p>
     </div>
   </footer>

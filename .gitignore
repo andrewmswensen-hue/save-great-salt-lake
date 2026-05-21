@@ -5,3 +5,7 @@
 .env
 .env.*
 node_modules/
+
+# Internal project docs (kept locally, not published)
+CLAUDE.md
+.claude/
