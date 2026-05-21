@@ -352,6 +352,12 @@ p { margin: 0 0 1em; }
   border-color: var(--ink);
 }
 .btn--ghost:hover { background: var(--ink); color: var(--bone); transform: translateY(-1px); }
+.btn--alert {
+  background: var(--rust);
+  color: var(--bone);
+  border-color: var(--rust);
+}
+.btn--alert:hover { background: var(--rust-deep); border-color: var(--rust-deep); color: var(--bone); transform: translateY(-1px); }
 
 /* ------------------------------------------------------------
    SECTION SHELL
@@ -439,6 +445,21 @@ p { margin: 0 0 1em; }
   color: var(--ochre);
   margin-bottom: 0.7rem;
   letter-spacing: -0.02em;
+}
+
+/* Headline stat variant: red number, bold label. Used for the 73% loss stat. */
+.stat--headline {
+  border-color: rgba(255, 145, 110, 0.35);
+  background: rgba(196, 90, 58, 0.08);
+}
+.stat--headline .stat__big {
+  color: #ff8158;
+  font-size: clamp(2.6rem, 5vw, 3.4rem);
+  font-weight: 800;
+}
+.stat--headline .stat__label {
+  font-weight: 700;
+  color: var(--bone);
 }
 .stat__label {
   font-size: 0.95rem;
@@ -568,6 +589,18 @@ p { margin: 0 0 1em; }
   max-width: 28ch;
   margin: 0 auto;
 }
+.contrast-card__src {
+  font-size: 0.78rem;
+  color: var(--mute);
+  margin-top: 0.5rem;
+  line-height: 1.3;
+}
+.contrast-card__src a {
+  color: var(--mute);
+  text-decoration: underline;
+  text-decoration-color: rgba(199, 154, 74, 0.55);
+}
+.contrast-card__src a:hover { color: var(--rust); }
 .contrast-card__vs {
   font-family: var(--serif);
   font-style: italic;
