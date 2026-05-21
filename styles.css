@@ -724,66 +724,77 @@ p { margin: 0 0 1em; }
 }
 
 /* ------------------------------------------------------------
-   "TO BE CLEAR, CONSERVATION STILL MATTERS" callout
+   PIVOT BLOCK — problem statement + solution, unified gradient
    ------------------------------------------------------------ */
-.reassure {
-  margin: 3rem 0 2rem;
-  padding: 2rem 2.25rem;
-  background: rgba(42, 112, 128, 0.07);
-  border-left: 4px solid var(--teal);
-  border-radius: 0 6px 6px 0;
-}
-.reassure__title {
-  font-size: clamp(1.3rem, 2.2vw, 1.6rem);
-  margin: 0 0 0.85rem;
-  color: var(--ink);
-}
-.reassure p {
-  font-size: 1rem;
-  line-height: 1.65;
-  color: var(--ink-soft);
-  margin: 0 0 0.85rem;
-}
-.reassure p:last-child { margin-bottom: 0; }
-.reassure strong { color: var(--ink); font-weight: 600; }
-
-/* ------------------------------------------------------------
-   BIG SOLUTION CALLOUT
-   ------------------------------------------------------------ */
-.big-solution {
+.pivot {
   margin: 3rem 0 0;
-  padding: clamp(2.5rem, 6vw, 4rem) clamp(1.5rem, 4vw, 3rem);
-  background: linear-gradient(135deg, var(--alfalfa-deep) 0%, var(--alfalfa) 100%);
+  padding: clamp(2.5rem, 5vw, 4rem) clamp(1.75rem, 4vw, 3rem);
+  background: linear-gradient(180deg,
+    #c79a4a 0%,
+    #b89048 22%,
+    #8c8a44 55%,
+    #6c8540 78%,
+    var(--alfalfa-deep) 100%);
   color: var(--bone);
-  border-radius: 8px;
+  border-radius: 10px;
   text-align: center;
   box-shadow: var(--shadow);
+  overflow: hidden;
 }
-.big-solution__lead {
+.pivot__top, .pivot__bottom { padding: 0.5rem 0; }
+.pivot__eyebrow {
   font-family: var(--sans);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   font-weight: 700;
-  color: rgba(250, 246, 239, 0.7);
-  margin: 0 0 0.85rem;
+  color: rgba(250, 246, 239, 0.78);
+  margin: 0 0 1rem;
 }
-.big-solution__main {
+.pivot__eyebrow--solution { color: rgba(250, 246, 239, 0.9); }
+.pivot__statement {
   font-family: var(--serif);
-  font-size: clamp(2rem, 6vw, 4rem);
+  font-variation-settings: "opsz" 144;
+  font-size: clamp(1.75rem, 4.2vw, 3rem);
   font-weight: 700;
-  line-height: 1.05;
+  line-height: 1.15;
   letter-spacing: -0.015em;
   color: var(--bone);
   margin: 0 auto 1.25rem;
-  max-width: 16ch;
+  max-width: 26ch;
 }
-.big-solution__sub {
-  font-size: clamp(1rem, 1.4vw, 1.15rem);
-  line-height: 1.55;
-  color: rgba(250, 246, 239, 0.85);
+.pivot__statement--solution {
+  font-size: clamp(2rem, 5.5vw, 3.6rem);
+  max-width: 18ch;
+}
+.pivot__sub {
+  font-size: clamp(0.98rem, 1.3vw, 1.1rem);
+  line-height: 1.6;
+  color: rgba(250, 246, 239, 0.9);
   margin: 0 auto;
-  max-width: 48ch;
+  max-width: 52ch;
+}
+.pivot__bridge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+  position: relative;
+}
+.pivot__bridge::before,
+.pivot__bridge::after {
+  content: "";
+  flex: 1;
+  max-width: 100px;
+  height: 1px;
+  background: rgba(250, 246, 239, 0.35);
+}
+.pivot__arrow {
+  font-family: var(--sans);
+  font-size: 1.4rem;
+  color: rgba(250, 246, 239, 0.85);
+  margin: 0 1rem;
+  line-height: 1;
 }
 
 /* ------------------------------------------------------------
