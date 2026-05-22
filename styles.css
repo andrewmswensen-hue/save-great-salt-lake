@@ -402,6 +402,7 @@ p { margin: 0 0 1em; }
   margin-bottom: 1.5rem;
   max-width: 24ch;
 }
+.section__title-accent { color: var(--rust); }
 .section__lead {
   font-size: clamp(1.05rem, 1.4vw, 1.2rem);
   color: var(--ink-soft);
@@ -1144,6 +1145,7 @@ p { margin: 0 0 1em; }
   color: var(--ink-soft);
   margin: 0;
 }
+.fix-card p strong { color: var(--rust); }
 
 /* ------------------------------------------------------------
    AMATEUR'S PROPOSAL SECTION
