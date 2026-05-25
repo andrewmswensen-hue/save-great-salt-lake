@@ -623,6 +623,8 @@ p { margin: 0 0 1em; }
   font-size: 0.85em;
   vertical-align: super;
   line-height: 0;
+  text-decoration: none !important;
+  border-bottom: none !important;
 }
 .contrast-card__vs {
   font-family: var(--display);
